@@ -13,7 +13,7 @@ public class MyDemoLoggingAspect {
 	// let's start with an @Before advice
 	
 	// pointcut expression with any return type
-	@Before("execution(* add*())")
+	@Before("execution(* add*(com.parprog.aopdemo.dao.Account))")
 	public void beforeAddAdvice() {
 		System.out.println("\n======>>>> Executing @Before advice on addAccount()");
 	}

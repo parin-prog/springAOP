@@ -2,6 +2,7 @@ package com.parprog.aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.parprog.aopdemo.dao.Account;
 import com.parprog.aopdemo.dao.AccountDAO;
 import com.parprog.aopdemo.dao.MembershipDAO;
 
@@ -21,7 +22,8 @@ public class MainDemoApp {
 				context.getBean("membershipDAO",MembershipDAO.class);
 		
 		// call the business method
-		theAccountDAO.addAccount();
+		Account myAccount = new Account();
+		theAccountDAO.addAccount(myAccount);
 		
 		// call the the membership business method
 		theMembershipDAO.addMember();
