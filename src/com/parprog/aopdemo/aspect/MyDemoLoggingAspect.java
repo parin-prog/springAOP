@@ -12,8 +12,8 @@ public class MyDemoLoggingAspect {
 	
 	// let's start with an @Before advice
 	
-	// pointcut expression with wildcard use
-	@Before("execution(public void add*())")
+	// pointcut expression with any return type
+	@Before("execution(* add*())")
 	public void beforeAddAdvice() {
 		System.out.println("\n======>>>> Executing @Before advice on addAccount()");
 	}
